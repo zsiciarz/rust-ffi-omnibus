@@ -7,6 +7,7 @@ COMMON_TEST_RULES := tests.mk
 TEST_C := tests_c.mk
 TEST_RUBY := tests_ruby.mk
 TEST_PYTHON := tests_python.mk
+TEST_HASKELL := tests_haskell.mk
 TEST_ALL_LANGUAGES := tests_all.mk
 
 dir := integers
@@ -16,7 +17,7 @@ include ${dir}/rules.mk
 dir := slice_arguments
 include ${dir}/rules.mk
 
-all: c ruby python
+all: c ruby python haskell
 .PHONY: all
 
 # Test only a single language
@@ -27,5 +28,6 @@ all: c ruby python
 c:
 ruby:
 python:
+haskell:
 
-.PHONY: c ruby python
+.PHONY: c ruby python haskell
